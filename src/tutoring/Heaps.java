@@ -2,7 +2,7 @@ package tutoring;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Heaps {
 
     // ---------- heap helpers (min-heap, 0-based) ----------
     static void siftUp(ArrayList<Integer> h, int i) {
