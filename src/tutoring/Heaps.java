@@ -1,5 +1,4 @@
 package tutoring;
-import java.io.*;
 import java.util.*;
 
 public class Heaps {
@@ -89,5 +88,6 @@ public class Heaps {
         long sum = 0;
         for (int v : heap) sum += v;
         System.out.println(sum);
+        sc.close();
     }
 }
