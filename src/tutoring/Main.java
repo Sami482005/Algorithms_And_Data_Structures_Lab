@@ -28,12 +28,12 @@ public class Main {
 
     static void heapSortAscending(ArrayList<Integer> h) {
     int n = h.size();
-    buildMaxHeap(h);                     // O(n)
+    //buildMaxHeap(h);                     // O(n)
     for (int end = n - 1; end > 0; --end) {
         // put current max at its final position
         int t = h.get(0); h.set(0, h.get(end)); h.set(end, t);
         // restore max-heap on the reduced prefix [0, end)
-        siftDownMax(h, 0, end);         // O(log n)
+        //siftDownMax(h, 0, end);         // O(log n)
     }
 }
 
