@@ -95,10 +95,6 @@ public class HeapSort {
 		if (isEmpty())
 			throw new NoSuchElementException();
 		int max = 1;
-		for (int i = 2; i <= arr[0]; i++){
-			if (arr[i] > arr[max])
-				max = i;
-		}
 		return max - 1;
 	}
 
@@ -109,7 +105,7 @@ public class HeapSort {
 		System.out.println();
 	}
 
-	private static void hatemExercise(){
+	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int[] A = new int[n];
@@ -122,36 +118,26 @@ public class HeapSort {
 			if (A[i] > A[MaxIndexInA])
 			MaxIndexInA = i;
 		}
-		System.out.print("Input Array: ");
-		for (int i : A)
-			System.out.print(i + " ");
-		System.out.println();
+		//System.out.print("Input Array: ");
+		//for (int i : A)
+			//System.out.print(i + " ");
+		//System.out.println();
 
 		HeapSort heap = new HeapSort(n);
 		for (int i : A)
 			heap.insert(i);
 		heap.buildHeap();
 		int MaxHeap = heap.findMax();
-		heap.printHeap();
+		//heap.printHeap();
 
 		Arrays.sort(A);;
 		int MaxIndexSortedA = A.length - 1;
-		System.out.print("Sorted Array:");
-		for (int i = 0; i < A.length; i++)
-			System.out.print(A[i] + " ");
-		System.out.println();
+		//System.out.print("Sorted Array:");
+		//for (int i = 0; i < A.length; i++)
+			//System.out.print(A[i] + " ");
+		//System.out.println();
 	
-		System.out.println("heap sze: " + heap.arr[0]);
+		//System.out.println("heap size: " + heap.arr[0]);
 		System.out.println(MaxIndexInA + " " + MaxHeap + " " + MaxIndexSortedA);
-	}
-	private static void yassineExercise(){
-		
-	}
-
-	public static void main(String[] args){
-		System.out.println("Starting Hatem's Exercise:");
-		hatemExercise();
-		System.out.println("\n\nStarting Yassine's Exercise");
-		yassineExercise();
 	}
 }
