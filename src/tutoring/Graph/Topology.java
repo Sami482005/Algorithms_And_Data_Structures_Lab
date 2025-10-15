@@ -61,6 +61,5 @@ public class Topology {
 			return;
 		}
 		System.out.println("unknown topology");
-
 	}
 }
