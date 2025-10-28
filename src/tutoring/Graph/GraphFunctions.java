@@ -27,6 +27,7 @@ public class GraphFunctions {
 		System.out.println("Is bipartite: " + isBipartite(graph, n));
 		System.out.println("Shortest path (1 → n): " + shortestPath(graph, 1, n));
 		System.out.println("Reachable(1, n): " + reachable(graph, 1, n));
+		sc.close();
 	}
 
 	// ---------- DFS ----------

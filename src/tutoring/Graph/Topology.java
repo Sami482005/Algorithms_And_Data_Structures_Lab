@@ -24,6 +24,7 @@ public class Topology {
 		}
 		if (ring){
 			System.out.println("ring topology");
+			sc.close();
 			return;
 		}
 
@@ -46,6 +47,7 @@ public class Topology {
 		}
 		if (isBus){
 			System.out.println("bus topology");
+			sc.close();
 			return;
 		}
 
@@ -58,8 +60,11 @@ public class Topology {
 		}
 		if (isStar){
 			System.out.println("star topology");
+			sc.close();
 			return;
 		}
 		System.out.println("unknown topology");
+
+		sc.close();
 	}
 }
