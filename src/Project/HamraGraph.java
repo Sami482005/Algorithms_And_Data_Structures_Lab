@@ -71,17 +71,17 @@ public class HamraGraph {
 					System.out.print(vertices[nei].getName() + ",(");
 					double x = distanceX(vertices[i], vertices[nei]);
 					if (x > 0){
-						System.out.print(x + " East, ");
+						System.out.print(x + "m East, ");
 					}
 					else if (x < 0){
-						System.out.print(-x + " West, ");
+						System.out.print(-x + "m West, ");
 					}
 					double y = distanceY(vertices[i], vertices[nei]);
 					if (y > 0){
-						System.out.print(y + " North)");
+						System.out.print(y + "m North)");
 					}
 					else if (y < 0){
-						System.out.print(-y + " South)");
+						System.out.print(-y + "m South)");
 					}
 					else
 						System.out.print("0)");

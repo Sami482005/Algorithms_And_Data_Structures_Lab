@@ -192,7 +192,7 @@ public class AVL {
 		return leftSum + rightSum;
 	}
 
-	public int sumatLeaves(int j){
+	public int sumAtLevel(int j){
 		if (getRoot() == null)
 			return 0;
 		Queue<Node> q = new LinkedList<>();

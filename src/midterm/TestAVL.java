@@ -40,9 +40,9 @@ public class TestAVL {
 		// Level 0: [50]
 		// Level 1: [30, 70]
 		// Level 2: [20, 40, 60, 80]
-		System.out.println("Sum at level 0: " + tree.sumatLeaves(0)); // 50
-		System.out.println("Sum at level 1: " + tree.sumatLeaves(1)); // 30+70=100
-		System.out.println("Sum at level 2: " + tree.sumatLeaves(2)); // 200
+		System.out.println("Sum at level 0: " + tree.sumAtLevel(0)); // 50
+		System.out.println("Sum at level 1: " + tree.sumAtLevel(1)); // 30+70=100
+		System.out.println("Sum at level 2: " + tree.sumAtLevel(2)); // 200
 
 		// ===== REMOVAL TEST =====
 		System.out.println("Removing 70...");
