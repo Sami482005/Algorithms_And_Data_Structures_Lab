@@ -30,7 +30,7 @@ public class MaxHeap {
 	private void sink(int index, int size){
 		while (2*index <= size){
 			int child= 2*index;
-			if (2*index+1 <=size && arr[2*index+1] > arr[2*index])
+			if (2*index+1 <= size && arr[2*index+1] > arr[2*index])
 				child = 2*index+1;
 			if (arr[index] >= arr[child]) break;
 			swap(index, child);

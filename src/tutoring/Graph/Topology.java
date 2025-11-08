@@ -52,12 +52,17 @@ public class Topology {
 		}
 
 		boolean isStar= (m==n-1);
+		int central = 0;
+		int peri = 0;
 		for (int i = 1; i < n+1; i++){
-			if (degree[i] != m && degree[i] != 1){
-				isStar = false;
-				break;
+			if (degree[i] == n-1)
+				central += 1;
+			else if (degree[i] == 1)
+				peri += 1;
 			}
-		}
+
+		isStar = (central == 1 && peri == n-1);
+
 		if (isStar){
 			System.out.println("star topology");
 			sc.close();
