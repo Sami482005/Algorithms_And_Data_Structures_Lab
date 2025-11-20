@@ -1,33 +1,19 @@
 package Project;
 
-import java.util.ArrayList;
-
 public class ConnectionPoint {
 
 	private String kind;
 	private String name;
-	private double x; // meters, X-axis increases to the East
-	private double y; // meters, Y-axis increases to the North
-	private ArrayList<Integer> neighbors; // List of connected vertex indices
+	private int x; // meters, X-axis increases to the East
+	private int y; // meters, Y-axis increases to the North
 
-	public ConnectionPoint(String kind, String name, double x, double y) {
+	public ConnectionPoint(String kind, String name, int x, int y) {
 		this.kind = kind;
 		this.name = name;
 		this.x = x;
 		this.y = y;
-		this.neighbors = new ArrayList<>();
 	}
 	
-	public void addNeighbor(int vertexIndex) {
-		if (!neighbors.contains(vertexIndex)) {
-			neighbors.add(vertexIndex);
-		}
-	}
-	
-	public ArrayList<Integer> getNeighbors() {
-		return neighbors;
-	}
-
 	public String getString() {
 		return kind;
 	}
@@ -36,11 +22,11 @@ public class ConnectionPoint {
 		return name;
 	}
 
-	public double getX() {
+	public int getX() {
 		return x;
 	}
 
-	public double getY() {
+	public int getY() {
 		return y;
 	}
 
@@ -52,11 +38,11 @@ public class ConnectionPoint {
 		this.name = name;
 	}
 
-	public void setX(double x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 
-	public void setY(double y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 

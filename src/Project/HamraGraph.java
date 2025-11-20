@@ -1,5 +1,8 @@
 package Project;
 
+
+import java.util.*;
+
 public class HamraGraph {
 	static final int max = 26;
 	public static ConnectionPoint[] vertices = new ConnectionPoint[max];
@@ -48,10 +51,23 @@ public class HamraGraph {
 
 		System.out.println("This is the list of vertices");
 		for (int i = 1; i <= 25; i++)
-			System.out.println(vertices[i]);
+			System.out.println(i + ") " + vertices[i]);
 		System.out.println("\n\nThese are the edges");
 		printGraph();
-		
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of the vertex at which you're currently at: ");
+		int source = sc.nextInt();
+		System.out.println("Enter the number of your destination: ");
+		int destination = sc.nextInt();
+
+		System.out.println("Your best path to reach your destination would be: ");
+		int[] path = dijkstra(vertices, source, destination);
+		for (int i = 0; i < path.length; i++){
+			System.out.println();
+		}
+
+
 	}
 
 	// Helper method to add multiple neighbors to a vertex at once (bidirectional)
