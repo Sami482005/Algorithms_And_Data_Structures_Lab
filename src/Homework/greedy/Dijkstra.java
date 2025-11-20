@@ -84,11 +84,11 @@ public class Dijkstra {
 			for (Edge e : graph.get(city)){
 				int v = e.to;
 				int cost = e.weight;
-			if (dist[city] + cost < dist[v]) {
-				dist[v] = dist[city] + cost;
-				prev[v]=city;
-				pq.add(new Node(v, dist[v]));
-			}
+				if (dist[city] + cost < dist[v]) {
+					dist[v] = dist[city] + cost;
+					prev[v]=city;
+					pq.add(new Node(v, dist[v]));
+				}
 			}
 		}
 		sc.close();

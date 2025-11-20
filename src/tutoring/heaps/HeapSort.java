@@ -1,4 +1,4 @@
-package tutoring;
+package tutoring.heaps;
 
 import java.util.Scanner;
 import java.util.Arrays;
