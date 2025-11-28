@@ -8,19 +8,6 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class FinalProject {
-	public static class WeightedEdge implements Comparable <WeightedEdge> {
-		public int to;
-		public int weight;
-
-		public WeightedEdge(int w, int weight){
-			this.to = w;
-			this.weight = weight;
-		}
-
-		public int compareTo(WeightedEdge that){
-			return Integer.compare(this.weight, that.weight);
-		}
-	}
 	public static class Node implements Comparable<Node>{
 		public int city;
 		public double dist;
